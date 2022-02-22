@@ -19,7 +19,7 @@ class _MyAppState extends State<MyApp> {
   TextEditingController inputKedua = TextEditingController();
   int? hasil = 0, input1 = 0, input2 = 0;
 
-  add() {
+  tambah() {
     setState(() {
       input1 = int.parse(inputPertama.text);
       input2 = int.parse(inputKedua.text);
@@ -88,8 +88,16 @@ class _MyAppState extends State<MyApp> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ElevatedButton(onPressed: () {}, child: Text('x')),
-                ElevatedButton(onPressed: () {}, child: Text('/')),
+                ElevatedButton(
+                    onPressed: () {
+                      kali();
+                    },
+                    child: Text('x')),
+                ElevatedButton(
+                    onPressed: () {
+                      bagi();
+                    },
+                    child: Text('/')),
               ],
             ),
             const SizedBox(
@@ -98,8 +106,16 @@ class _MyAppState extends State<MyApp> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ElevatedButton(onPressed: () {}, child: Text('+')),
-                ElevatedButton(onPressed: () {}, child: Text('-')),
+                ElevatedButton(
+                    onPressed: () {
+                      tambah();
+                    },
+                    child: Text('+')),
+                ElevatedButton(
+                    onPressed: () {
+                      kurang();
+                    },
+                    child: Text('-')),
               ],
             )
           ],
