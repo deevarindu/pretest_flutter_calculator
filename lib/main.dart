@@ -58,8 +58,8 @@ class _MyAppState extends State<MyApp> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            const Text(
-              'Hasil Perhitungan : ',
+            Text(
+              'Hasil Perhitungan : $hasil',
               style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w500),
             ),
             const SizedBox(
